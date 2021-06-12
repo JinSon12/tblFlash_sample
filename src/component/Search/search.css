@@ -1,0 +1,15 @@
+.input-group-text {
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+}
+
+.input-group-container {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.input-group .form-control {
+  border: none;
+  border-radius: 20px;
+}
