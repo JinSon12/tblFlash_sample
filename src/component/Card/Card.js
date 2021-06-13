@@ -1,21 +1,24 @@
 import React, { useState, useEffect } from "react";
-import "./card.css";
+import { Redirect } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { randomNumGenerator } from "../../utils/randomNumGenerator";
+import "./card.css";
 
-const DISCOUNT = "Discount";
-const FREEDEL = "Free Delivery";
+// const DISCOUNT = "Discount";
+// const FREEDEL = "Free Delivery";
 
 const Card = (props) => {
   const [viewCount, setviewCount] = useState(randomNumGenerator(10, 3000));
   const [promoType, setPromoType] = useState("");
+  const [redirectTo, setRedirectTo] = useState(undefined);
 
   let cardData = props.data;
 
   const handleClick = () => {
     // I would further send a request to the server increasing the count, using axios.
     setviewCount(viewCount + 1);
+    setRedirectTo(props.dataId);
   };
 
   // check promotion type and sets the promoType state.
@@ -33,6 +36,10 @@ const Card = (props) => {
   useEffect(() => {
     getPromotionType();
   }, []);
+
+  if (redirectTo) {
+    return <Redirect push to={"/promo/" + redirectTo} />;
+  }
 
   return (
     <div className="card" onClick={handleClick}>

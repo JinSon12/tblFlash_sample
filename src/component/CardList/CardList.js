@@ -28,7 +28,7 @@ const CardList = (props) => {
   };
 
   let mappedData = searchResult.map((data, ind) => {
-    return <Card data={data} key={ind} />;
+    return <Card data={data} key={ind} dataId={ind + 1} />;
   });
 
   return <div className="card-list">{mappedData}</div>;

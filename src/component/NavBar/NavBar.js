@@ -35,7 +35,7 @@ const NavBar = (props) => {
             <DropdownItem>Option 1</DropdownItem>
 
             <DropdownItem divider />
-            <DropdownItem>Reset</DropdownItem>
+            <DropdownItem>About</DropdownItem>
           </DropdownMenu>
         </Dropdown>
 
