@@ -14,7 +14,7 @@
   min-height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   margin: 0.5rem;
   flex: 0 0 48%;
 }
@@ -37,6 +37,11 @@
   padding: 0.3rem 0rem;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
+}
+
+.store-name {
+  color: tomato;
+  font-weight: 600;
 }
 
 .card-text {
@@ -71,26 +76,23 @@
   }
 
   .card-top {
-    margin-bottom: 1rem;
-  }
-
-  .card-top {
     position: relative;
+    margin-bottom: 0.7rem;
   }
 
   .card-text {
     padding: 0.3rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.8rem;
   }
 
-  .store-name {
+  .promo-type {
     position: absolute;
-    bottom: -5px;
+    bottom: -10px;
     padding: 2px 8px;
     background-color: #ffc765;
     color: white;
     font-weight: 600;
-    left: -3px;
+    left: -4px;
   }
 
   .card-text .location {

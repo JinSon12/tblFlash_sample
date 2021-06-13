@@ -4,8 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { randomNumGenerator } from "../../utils/randomNumGenerator";
 
+const DISCOUNT = "Discount";
+const FREEDEL = "Free Delivery";
+
 const Card = (props) => {
   const [viewCount, setviewCount] = useState(randomNumGenerator(10, 3000));
+  const [promoType, setPromoType] = useState("");
 
   let cardData = props.data;
 
@@ -13,6 +17,22 @@ const Card = (props) => {
     // I would further send a request to the server increasing the count, using axios.
     setviewCount(viewCount + 1);
   };
+
+  // check promotion type and sets the promoType state.
+  const getPromotionType = () => {
+    let ptype = cardData.promotionType;
+
+    setPromoType(ptype);
+  };
+
+  // if there is location information associated with the deal, display it along with icon.
+  const displayLocation = () => {
+    let loc = cardData.location;
+  };
+
+  useEffect(() => {
+    getPromotionType();
+  }, []);
 
   return (
     <div className="card" onClick={handleClick}>
@@ -22,9 +42,10 @@ const Card = (props) => {
           <FontAwesomeIcon className="icon" icon={faEye} />
           {viewCount}
         </div>
-        <div className="store-name">{cardData.storeName}</div>
+        <div className="promo-type">{promoType}</div>
       </div>
       <div className="card-text">
+        <div className="store-name">{cardData.storeName}</div>
         <div className="title">{cardData.title}</div>
         <div className="subtitle">{cardData.subtitle}</div>
         <div className="location">{cardData.location}</div>
