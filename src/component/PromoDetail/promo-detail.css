@@ -142,3 +142,93 @@
     margin-bottom: 1rem;
   }
 }
+
+@media only screen and (min-width: 1200px) {
+  .promo-det-container {
+    display: flex;
+    height: calc(100vh - 4rem);
+  }
+
+  .card-img-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: start;
+    flex: 1 1 40%;
+  }
+
+  .promo-det-container .card-img {
+    height: auto;
+    width: 100%;
+  }
+
+  .promo-det-container .card-btn {
+    margin-left: 0;
+    font-size: 1.5rem;
+  }
+
+  .promo-minor-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .promo-viewCount .text,
+  .promo-det-container .location {
+    font-size: 1.2rem;
+  }
+
+  .promo-store-add-info {
+    padding: 5vh 0;
+    font-size: 1.4rem;
+  }
+
+  .promo-info-container {
+    position: relative;
+    display: block;
+    width: 60%;
+    height: 100%;
+  }
+
+  .promo-info .store-name {
+    font-size: 1.7rem;
+  }
+
+  .divider {
+    border-bottom: 3px solid tomato;
+    width: 3rem;
+    margin: 1.5rem 0;
+  }
+
+  .promo-info .promo-type {
+    background-color: transparent;
+    color: #666666;
+    font-size: 1.2rem;
+    position: relative;
+    padding: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .promo-info .title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .promo-info .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .promo-info .det-descr {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .promo-info-container .card-btn {
+    position: fixed;
+    width: inherit;
+    bottom: 0;
+    text-align: center;
+  }
+}
