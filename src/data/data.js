@@ -10,6 +10,8 @@ const data = [
     detailedDescr:
       "Young Tea (Seattle) now has a new cup design. Plus 10% off on selected milk tea drinks.",
     viewCnt: 1705,
+    addr: "609 S Weller St Seattle 98104",
+    phone: "(206) 682-6688",
   },
   {
     img: "dzone.jpg",

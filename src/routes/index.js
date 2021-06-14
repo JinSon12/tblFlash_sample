@@ -12,7 +12,10 @@ const Routes = () => (
   <Router>
     <Switch>
       <Route exact path="/" component={RestaurantDeals} />
-      <Route path="/promo/:promoId" component={PromoDetail} />
+      <Route
+        path="/promo/:promoId"
+        render={(props) => <PromoDetail {...props} />}
+      />
       {/* <Route path="/about" component={Aquarium} /> */}
       <Redirect to="/" />
     </Switch>

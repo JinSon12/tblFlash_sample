@@ -1,0 +1,144 @@
+.promo-det-container {
+  position: relative;
+  background-color: white;
+  overflow: scroll;
+}
+
+.promo-minor-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 199, 101);
+  color: white;
+  font-weight: 600;
+}
+
+.promo-det-container .card-img {
+  border-radius: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.promo-det-container a {
+  color: rgb(255, 199, 101);
+}
+
+.promo-det-container .card-btn {
+  border-radius: 0;
+  position: fixed;
+  bottom: 0;
+}
+
+.promo-viewCount .text {
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-left: 3px;
+}
+
+@media only screen and (min-width: 100px) {
+  .promo-minor-info {
+    padding: 0.8vh 2vw;
+  }
+
+  .promo-info {
+    padding: 3vw;
+    font-size: 1.3rem;
+  }
+
+  .promo-store-add-info {
+    padding: 1vh 3vw;
+    margin-bottom: 5rem;
+  }
+
+  .promo-det-container .card-btn {
+    border-radius: 0;
+    position: fixed;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .promo-info .store-name {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .promo-info .title {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .promo-info .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .promo-info .det-descr {
+    font-size: 0.8rem;
+    color: rgb(97, 97, 97);
+  }
+
+  .promo-info .promo-type {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .card-img-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .promo-det-container .card-img {
+    height: 50vh;
+    width: auto;
+  }
+
+  .promo-det-container .card-btn {
+    font-size: 1.5rem;
+  }
+
+  .promo-viewCount .text,
+  .promo-det-container .location {
+    font-size: 1.2rem;
+  }
+
+  .promo-store-add-info {
+    font-size: 1.4rem;
+  }
+
+  .promo-info .store-name {
+    font-size: 1.7rem;
+  }
+
+  .divider {
+    border-bottom: 3px solid tomato;
+    width: 3rem;
+    margin: 1.5rem 0;
+  }
+
+  .promo-info .promo-type {
+    background-color: transparent;
+    color: #666666;
+    font-size: 1.2rem;
+    position: relative;
+    padding: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .promo-info .title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .promo-info .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .promo-info .det-descr {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+}

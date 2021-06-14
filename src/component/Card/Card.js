@@ -14,6 +14,7 @@ const Card = (props) => {
   const [redirectTo, setRedirectTo] = useState(undefined);
 
   let cardData = props.data;
+  console.log(cardData);
 
   const handleClick = () => {
     // I would further send a request to the server increasing the count, using axios.
@@ -38,7 +39,16 @@ const Card = (props) => {
   }, []);
 
   if (redirectTo) {
-    return <Redirect push to={"/promo/" + redirectTo} />;
+    console.log(cardData);
+    return (
+      <Redirect
+        push
+        to={{
+          pathname: `/promo/${redirectTo}`,
+          state: { data: cardData, viewCount: viewCount },
+        }}
+      />
+    );
   }
 
   return (

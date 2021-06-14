@@ -17,3 +17,22 @@
 .searchbar {
   padding: 0.5rem 0.2rem;
 }
+
+@media only screen and (min-width: 992px) {
+  .searchbar {
+    padding: 1rem 0.2rem;
+  }
+
+  .input-group-text {
+    font-size: 1.5rem;
+  }
+
+  .form-control {
+    font-size: 1.5rem;
+  }
+
+  .input-group .form-control,
+  .input-group-text {
+    border-radius: 30px;
+  }
+}
